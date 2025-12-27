@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 15939 Quality Measurement Platform</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            📊
+            <div class="logo-text">ISO 15939</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a class="nav-link" onclick="showPage('home')">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a></li>
+            <li><a class="nav-link" onclick="showPage('simulator')">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Simulator</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page active">
+        <div class="hero">
+            <div class="hero-left">
+                <h1>Software Quality<br>Measurement Platform</h1>
+                <p>Master ISO/IEC 15939 measurement processes with hands-on simulation. Learn to assess software quality using international standards.</p>
+                <div class="cta-group">
+                    <button class="btn btn-primary" onclick="showPage('simulator')">Start Simulator →</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-visual">
+                    <div class="stat-card">
+                        <div class="stat-number">15939</div>
+                        <div class="stat-label">ISO Standard</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Quality Dimensions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Process Steps</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Standards Based</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>ISO 15939 Process</h3>
+                <p>Learn structured measurement approach: Define, Plan, Collect, Analyze</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>ISO 25010 Integration</h3>
+                <p>All 8 quality characteristics with sub-characteristics support</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>ISO 25023 Metrics</h3>
+                <p>Standard metrics library with custom metric creation</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Predefined Scenarios</h3>
+                <p>Ready-to-use templates: E-commerce, Banking, Student Portal</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Radar Chart Analysis</h3>
+                <p>Visual quality assessment with radar and bar charts</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Smart Recommendations</h3>
+                <p>Automated improvement suggestions based on gaps</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="simulator" class="page">
+        <div class="simulator-container">
+            <div class="sim-header">
+                <h1>Quality Measurement Simulator</h1>
+                <p>Practice software quality assessment following ISO 15939 process</p>
+            </div>
+
+            <div class="step-indicator">
+                <div class="step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Define</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Plan</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Collect</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Analyze</div>
+                </div>
+            </div>
+
+            <div class="sim-content">
+                <div class="sim-step active" data-step="1">
+                    <h2 class="section-title">Step 1: Define Evaluation Scenario</h2>
+                    
+                    <div class="form-group">
+                        <label>Choose Scenario Type</label>
+                        <div class="scenario-grid">
+                            <div class="scenario-card" onclick="selectScenario('ecommerce')">
+                                <h3>🛒 E-Commerce Platform</h3>
+                                <p>Online shopping system with payment and inventory management</p>
+                                <span class="scenario-badge">Predefined</span>
+                            </div>
+                            <div class="scenario-card" onclick="selectScenario('studentportal')">
+                                <h3>🎓 Student Portal</h3>
+                                <p>Educational management system for students and faculty</p>
+                                <span class="scenario-badge">Predefined</span>
+                            </div>
+                            <div class="scenario-card" onclick="selectScenario('banking')">
+                                <h3>🏦 Mobile Banking App</h3>
+                                <p>Financial services application with transaction management</p>
+                                <span class="scenario-badge">Predefined</span>
+                            </div>
+                            <div class="scenario-card selected" onclick="selectScenario('custom')">
+                                <h3>✏️ Custom Project</h3>
+                                <p>Define your own evaluation scenario</p>
+                                <span class="scenario-badge" style="background: var(--accent);">Custom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="customScenarioForm">
+                        <div class="form-group">
+                            <label>Project Name</label>
+                            <input type="text" id="projectName" placeholder="e.g., Mobile Banking App">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Project Type</label>
+                            <select id="projectType">
+                                <option value="">Select project type...</option>
+                                <option value="web">Web Application</option>
+                                <option value="mobile">Mobile Application</option>
+                                <option value="desktop">Desktop Application</option>
+                                <option value="iot">IoT System</option>
+                                <option value="embedded">Embedded System</option>
+                                <option value="api">API/Microservices</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Information Need (What do you want to know?)</label>
+                            <textarea id="infoNeed" placeholder="Describe what you want to measure and why. Example: We need to assess if our system's performance meets user expectations under peak load conditions."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Measurement Objective</label>
+                            <textarea id="objective" placeholder="What decision will this measurement support? Example: Decide if we need infrastructure scaling before launch."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="sim-navigation">
+                        <div></div>
+                        <button class="btn btn-primary" onclick="nextStep()">Next: Plan Measurement →</button>
+                    </div>
+                </div>
+
+                <div class="sim-step" data-step="2">
+                    <h2 class="section-title">Step 2: Plan Measurement</h2>
+                    
+                    <p style="background: #ecfeff; padding: 18px; border-radius: 15px; margin-bottom: 35px; border-left: 5px solid var(--secondary);">
+                        <strong>Select Quality Characteristics:</strong> Choose from all 8 ISO 25010 characteristics. Expand to see sub-characteristics and assign weights (total must = 100%)
+                    </p>
+
+                    <div class="quality-dimensions" id="dimensionsContainer"></div>
+
+                    <div style="margin-top: 35px; padding: 25px; background: var(--bg); border-radius: 20px; border: 2px solid var(--border);">
+                        <strong style="font-size: 1.1em;">Total Weight: <span id="totalWeight">0</span>%</strong>
+                        <span id="weightValidation" style="margin-left: 20px; font-weight: 600;"></span>
+                    </div>
+
+                    <div class="sim-navigation">
+                        <button class="btn" onclick="prevStep()">← Previous</button>
+                        <button class="btn btn-primary" onclick="nextStep()" id="planNextBtn" disabled>Next: Collect Data →</button>
+                    </div>
+                </div>
+
+                <div class="sim-step" data-step="3">
+                    <h2 class="section-title">Step 3: Select Metrics & Collect Data</h2>
+                    
+                    <p style="background: #fef2f2; padding: 18px; border-radius: 15px; margin-bottom: 35px; border-left: 5px solid var(--danger);">
+                        <strong>ISO 25023 Metrics:</strong> Select metrics for each dimension or add custom metrics. Then enter measurement values.
+                    </p>
+
+                    <div id="metricsSelectionContainer"></div>
+
+                    <div class="sim-navigation">
+                        <button class="btn" onclick="prevStep()">← Previous</button>
+                        <button class="btn btn-primary" onclick="nextStep()">Next: Analyze Results →</button>
+                    </div>
+                </div>
+
+                <div class="sim-step" data-step="4">
+                    <h2 class="section-title">Step 4: Analysis & Results</h2>
+                    
+                    <div id="resultsContainer"></div>
+
+                    <div class="sim-navigation">
+                        <button class="btn" onclick="prevStep()">← Previous</button>
+                        <button class="btn btn-primary" onclick="resetSimulator()">🔄 Start New Measurement</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
