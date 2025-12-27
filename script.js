@@ -114,7 +114,9 @@ const iso25010Model = {
     }
 };
 
-// State Management
+// BÖLÜM 2: DURUM YÖNETİMİ (STATE MANAGEMENT)
+// Uygulamanın o anki durumunu tutan değişkenler
+
 let currentStep = 1;
 let selectedScenario = 'custom';
 let selectedDimensions = [];
