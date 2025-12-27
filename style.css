@@ -147,8 +147,11 @@ body {
 }
 
 #home {
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;    /* height yerine min-height kullandık */
+    height: auto;         /* İçeriğe göre uzasın */
+    overflow-x: hidden;   /* Yanlara taşmayı engelle */
+    overflow-y: auto;     /* Aşağı doğru uzamasına izin ver */
+    padding-bottom: 50px; /* En alta genel bir boşluk */
 }
 
 /* Home Page - Asymmetric Layout */
