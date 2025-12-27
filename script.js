@@ -123,7 +123,8 @@ let selectedDimensions = [];
 let selectedMetrics = {};
 let measurementData = {};
 
-// Initialize
+// BÖLÜM 3: FONKSİYONLAR (FUNCTIONS)
+// Sayfa ilk açıldığında çalışacak başlangıç fonksiyonu
 function init() {
     renderDimensions();
 }
