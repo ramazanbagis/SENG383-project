@@ -753,7 +753,7 @@ function resetSimulator() {
     showSimStep(1);
 }
 
-// Initialize on load
+// Sayfa tamamen yüklendiğinde init fonksiyonunu başlat
 window.onload = init;
 // script.js EN ALTINA EKLE
 
