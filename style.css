@@ -40,41 +40,53 @@ body {
 }
 
 /* Navigation - Sidebar Style */
+/* Navigation - Dark Sidebar Style */
 .navbar {
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
     width: 80px;
-    background: var(--card-bg);
+    background: #1e1b4b; /* Koyu Lacivert Arkaplan */
     border-right: 1px solid var(--border);
     z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 0;
-    transition: width 0.3s;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1); /* Hafif gölge ekledik */
 }
 
-.navbar:hover {
-    width: 220px;
-}
-
-.logo {
-    font-size: 2em;
-    margin-bottom: 50px;
+/* Linklerin rengini beyaza çeviriyoruz */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: #e2e8f0; /* Açık gri yazı */
+    text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 3px solid transparent; /* Sol tarafa gizli çubuk */
 }
 
-.navbar:hover .logo {
-    font-size: 1.2em;
+/* Hover olunca arka planı hafif aydınlat */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: var(--primary-light); /* Hoverda sol çubuk parlasın */
 }
 
+/* Logo Rengini Ayarla */
 .logo-text {
     display: none;
     font-weight: 700;
-    color: var(--primary);
+    color: white; /* Logo yazısı beyaz olsun */
     margin-top: 10px;
+    font-size: 0.9em;
 }
 
 .navbar:hover .logo-text {
