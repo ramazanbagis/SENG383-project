@@ -963,3 +963,50 @@ body {
     margin-bottom: 15px;
     border-left: 5px solid var(--success);
 }
+/* style.css EN ALTINA EKLE */
+
+/* Dark Mode Değişkenleri */
+body.dark-mode {
+    /* Ana Arka Plan: Çok koyu lacivert/gri */
+    --bg: #0f172a; 
+    
+    /* Kart Arka Planları: Bir ton açık koyu */
+    --card-bg: #1e293b;
+    
+    /* Metin Renkleri: Beyaza yakın gri */
+    --text: #cbd5e1;
+    --dark: #f8fafc; /* Başlıklar bembeyaz olsun */
+    --text-light: #94a3b8;
+    
+    /* Çizgiler ve Kenarlıklar: Koyu gri */
+    --border: #334155;
+    
+    /* Accent renkleri biraz yumuşatalım ki göz almasın */
+    --primary: #6366f1; /* Daha parlak bir indigo */
+    --secondary: #14b8a6;
+}
+
+/* Dark mode açıkken bazı özel alan düzeltmeleri */
+body.dark-mode .nav-link {
+    color: #94a3b8;
+}
+
+body.dark-mode .nav-link:hover {
+    color: white;
+    background: rgba(255,255,255,0.05);
+}
+
+/* Form elemanlarını koyu yapalım */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #0f172a;
+    color: white;
+    border-color: #334155;
+}
+
+body.dark-mode .scenario-card,
+body.dark-mode .dimension-card,
+body.dark-mode .metric-item {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
