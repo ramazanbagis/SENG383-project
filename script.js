@@ -751,3 +751,32 @@ function resetSimulator() {
 
 // Initialize on load
 window.onload = init;
+// script.js EN ALTINA EKLE
+
+function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById('theme-icon');
+    
+    // Sınıfı aç/kapa
+    body.classList.toggle('dark-mode');
+    
+    // İkonu ve durumu güncelle
+    if (body.classList.contains('dark-mode')) {
+        icon.textContent = '☀️'; // Güneş simgesi
+        localStorage.setItem('theme', 'dark');
+    } else {
+        icon.textContent = '🌙'; // Ay simgesi
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Sayfa yüklendiğinde hafızadaki tercihi kontrol et
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const icon = document.getElementById('theme-icon');
+    
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if(icon) icon.textContent = '☀️';
+    }
+});
