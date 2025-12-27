@@ -41,6 +41,7 @@ const iso25010Model = {
             { name: 'Functional Appropriateness', description: 'Task achievement rate', unit: '%', max: 100, target: 90 }
         ]
     },
+    // Diğer kalite özellikleri (Performance, Usability vb.) buraya gelir
     performance: {
         name: 'Performance Efficiency',
         description: 'Time behavior, resource utilization, capacity',
