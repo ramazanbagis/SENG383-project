@@ -60,7 +60,7 @@ body {
     box-shadow: 4px 0 10px rgba(0,0,0,0.1); /* Hafif gölge ekledik */
 }
 
-/* Linklerin rengini beyaza çeviriyoruz */
+/* Link Stilleri */
 .nav-link {
     display: flex;
     align-items: center;
