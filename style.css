@@ -91,6 +91,7 @@ body {
     font-size: 0.9em;
 }
 
+/* Menü üzerine gelince logo yazısı görünsün */
 .navbar:hover .logo-text {
     display: block;
 }
