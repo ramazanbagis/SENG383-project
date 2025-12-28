@@ -784,3 +784,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if(icon) icon.textContent = '☀️';
     }
 });
+// script.js EN ALTINA EKLE
+
+function showFeatures() {
+    const featuresSection = document.getElementById('features-section');
+    
+    // 1. Önce görünür yap (Grid sistemini geri getir)
+    featuresSection.style.display = 'grid';
+    
+    // 2. Sonra oraya yumuşakça kaydır
+    featuresSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
