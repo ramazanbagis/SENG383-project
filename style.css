@@ -307,18 +307,29 @@ body {
     transform: translateY(-5px);
 }
 
+/* Sayılar - Modern Gradient ve İdeal Boyut */
 .stat-number {
-    font-size: 2em;
+    font-size: 2.4em; /* 2.8em'den 2.4em'e düşürdük (1 tık küçük) */
     font-weight: 900;
     margin-bottom: 5px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    
+    /* Renk: Parlak Açık Mavi'den İndigo'ya geçiş */
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    
+    /* Yazının içini boyama tekniği */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    /* Gölgeyi kaldırdık, gradyan yeterince net */
+    text-shadow: none; 
 }
 
+/* Sayıların Altındaki Yazılar */
 .stat-label {
-    font-size: 0.75em;
-    opacity: 0.8;
+    font-size: 0.85em; /* Burayı da orantılı olarak çok hafif küçülttüm */
+    color: #e2e8f0;    /* Net, açık gri */
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 /* Features - Staggered Grid */
