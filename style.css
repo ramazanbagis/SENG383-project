@@ -40,8 +40,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation - Sidebar Style */
-/* Navigation - Dark Sidebar Style */
+2. NAVBAR (SOL MENÜ) TASARIMI
+    Solda sabit duran menünün stilleri.
+
 .navbar {
     position: fixed;
     left: 0;
