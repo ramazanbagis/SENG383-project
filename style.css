@@ -40,8 +40,8 @@ body {
     overflow-x: hidden;
 }
 
-2. NAVBAR (SOL MENÜ) TASARIMI
-    Solda sabit duran menünün stilleri.
+/*2. NAVBAR (SOL MENÜ) TASARIMI
+    Solda sabit duran menünün stilleri. */
 
 .navbar {
     position: fixed;
