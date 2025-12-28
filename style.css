@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* CSS Değişkenleri (Renk Havuzu) */
 :root {
     --primary: #4f46e5;       /* Ana renk: İndigo */
     --primary-light: #818cf8;
