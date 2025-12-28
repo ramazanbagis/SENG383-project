@@ -84,7 +84,7 @@ body {
 
 /* Logo Rengini Ayarla */
 .logo-text {
-    display: none;
+    display: none;    /* Normalde gizli */
     font-weight: 700;
     color: white; /* Logo yazısı beyaz olsun */
     margin-top: 10px;
