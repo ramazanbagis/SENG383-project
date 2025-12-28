@@ -398,17 +398,20 @@ body {
     filter: grayscale(0);
 }
 
+/* Feature Card Başlıkları - Daha Canlı */
 .feature-card h3 {
-    font-size: 0.95em;
-    margin-bottom: 6px;
-    color: var(--dark);
+    font-size: 1.1em; /* Biraz büyüttük */
+    margin-bottom: 8px;
+    color: var(--primary); /* Koyu gri yerine ana renk (Mavi) yaptık */
     font-weight: 800;
 }
 
+/* Feature Card Açıklamaları - Daha Okunaklı */
 .feature-card p {
-    color: var(--text-light);
-    line-height: 1.4;
-    font-size: 0.78em;
+    color: var(--text); /* Açık gri (text-light) yerine normal koyu metin rengi */
+    line-height: 1.5;
+    font-size: 0.85em; /* Biraz büyüttük */
+    font-weight: 500; /* Biraz kalınlaştırdık ki net okunsun */
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
