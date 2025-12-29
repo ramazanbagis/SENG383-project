@@ -173,7 +173,7 @@ body {
 }
 
 .hero::before { /* :: html kullanmadan ikonlar veya süsleme eklemek için*/
-    content: '';
+    content: ''; /* boş olsun ama varolsun */
     position: absolute;
     width: 500px;
     height: 500px;
