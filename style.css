@@ -111,10 +111,10 @@ body {
     gap: 15px;
     padding: 15px 20px;
     color: var(--text);
-    text-decoration: none;
+    text-decoration: none; /* tarayıcının otamatik çizdiği alt çizgiyi kaldırıyor*/
     cursor: pointer;
     transition: all 0.3s;
-    white-space: nowrap;
+    white-space: nowrap; /* menünün üzeirne gelince ikondan yazıya döndürüyor alt alta sıralamnıyor yan yana yazıyor*/
     overflow: hidden;
 }
 
