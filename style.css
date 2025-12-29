@@ -172,7 +172,7 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
+.hero::before { /* :: html kullanmadan ikonlar veya süsleme eklemek için*/
     content: '';
     position: absolute;
     width: 500px;
