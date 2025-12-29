@@ -97,7 +97,7 @@ body {
 }
 
 .nav-menu {
-    list-style: none;
+    list-style: none; /*  Madde işaretlerini (noktaları) kaldır */
     width: 100%;
 }
 
