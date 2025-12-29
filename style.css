@@ -149,7 +149,7 @@ body {
     display: block;
 }
 
-#home {
+#home { /* ID */
     min-height: 100vh;    /* height yerine min-height kullandık */
     height: auto;         /* İçeriğe göre uzasın */
     overflow-x: hidden;   /* Yanlara taşmayı engelle */
@@ -162,7 +162,7 @@ body {
 .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     
-    /* ESKİSİ: height: 60vh; */
+  
     height: 100vh;  /* <-- YENİSİ: Ekranın %100'ünü kapla */
     
     display: grid;
